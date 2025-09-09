@@ -12,8 +12,8 @@ form.addEventListener('submit', (e) => {
 function checkInputs(){
     const usernameValue = username.value
     const emailValue = email.value
-    const passwordValue =  password.value
-    const  passwordConfirmationValue =  passwordConfirmation.value
+    const passwordValue = password.value
+    const passwordConfirmationValue = passwordConfirmation.value
 
 
  
@@ -27,7 +27,18 @@ if(emailValue === ''){
 }  else {
     setSuccessFor(email)
     }
-    
+if(passwordValue === ''){
+    setErroFor(password, 'O nome do usuario é obrigatorio')
+}  else {
+    setSuccessFor(password)
+    }
+if(passwordConfirmationValue === ''){
+    setErroFor(passwordConfirmationValue, 'O nome do usuario é obrigatorio')
+}  else {
+    setSuccessFor(passwordConfirmationValue)
+    }
+
+
 }
 
     
