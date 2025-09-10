@@ -32,12 +32,17 @@ if(passwordValue === ''){
 }  else {
     setSuccessFor(password)
     }
+    
 if(passwordConfirmationValue === ''){
-    setErroFor(passwordConfirmationValue, 'O nome do usuario é obrigatorio')
-}  else {
-    setSuccessFor(passwordConfirmationValue)
-    }
+    setErroFor(passwordConfirmation, 'O nome do usuario é obrigatorio')
+}  
+else if(passwordConfirmationValue !== passwordValue){
 
+    setErroFor(passwordConfirmation, 'O nome do usuario é obrigatorio')
+    }
+    else{
+        setSuccessFor(passwordConfirmation)
+    }
 
 }
 
